@@ -278,12 +278,12 @@ public class X5WebViewClient extends WebViewClient {
     }
 
 
-    private static final String INJECTION_TOKEN = "http://injection/"; //新增
+    private static final String INJECTION_TOKEN = "http://injection/"; //鏂板
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
     public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
-//        ---新增---
+//        ---鏂板---
         if(url != null && url.contains(INJECTION_TOKEN)) {
             String assetPath = url.substring(url.indexOf(INJECTION_TOKEN) + INJECTION_TOKEN.length(), url.length());
             try {
@@ -298,7 +298,7 @@ public class X5WebViewClient extends WebViewClient {
                 return new WebResourceResponse("text/plain", "UTF-8", null);
             }
         }
-//        ---新增---
+//        ---鏂板---
         try {
             // Check the against the whitelist and lock out access to the WebView directory
             // Changing this will cause problems for your application
