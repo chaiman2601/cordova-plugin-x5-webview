@@ -33,6 +33,7 @@
 			<!-- @change 新增权限-->
 			<uses-permission android:name="android.permission.CAMERA" />
         </config-file>
+        <source-file src="platforms/android/src/org/jeremyup/cordova/x5engine/PictureUtil.java" target-dir="src/org/jeremyup/cordova/x5engine"/>
 
         <source-file src="platforms/android/src/org/jeremyup/cordova/x5engine/X5CookieManager.java" target-dir="src/org/jeremyup/cordova/x5engine"/>
         <source-file src="platforms/android/src/org/jeremyup/cordova/x5engine/X5CordovaClientCertRequest.java" target-dir="src/org/jeremyup/cordova/x5engine"/>
