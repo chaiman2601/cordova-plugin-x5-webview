@@ -93,12 +93,7 @@ public class PictureUtil {
     }
 
 
-    /**
-     * 读取照片旋转角度
-     *
-     * @param path 照片路径
-     * @return 角度
-     */
+
     public static int readPictureDegree(String path) {
         int degree = 0;
         try {
@@ -121,20 +116,14 @@ public class PictureUtil {
         }
         return degree;
     }
-    /**
-     * 旋转图片
-     * @param angle 被旋转角度
-     * @param bitmap 图片对象
-     * @return 旋转后的图片
-     */
+
     public static Bitmap rotaingImageView(int angle, Bitmap bitmap) {
         Log.e("TAG","angle==="+angle);
         Bitmap returnBm = null;
-        // 根据旋转角度，生成旋转矩阵
+        //
         Matrix matrix = new Matrix();
         matrix.postRotate(angle);
         try {
-            // 将原始图片按照旋转矩阵进行旋转，并得到新的图片
             returnBm = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
         } catch (OutOfMemoryError e) {
         }
@@ -147,11 +136,10 @@ public class PictureUtil {
         return returnBm;
     }
 
-    // 指纹图片存放路径
+    // 
     public String sdCardDir = Environment.getExternalStorageDirectory() + "/fingerprintimages/";
 
     /**
-     * 保存指纹图片
      *
      * @param bitmap
      */
@@ -167,16 +155,6 @@ public class PictureUtil {
             e.printStackTrace();
         }
 
-        // 把文件插入到系统图库
-//        try {
-//            MediaStore.Images.Media.insertImage(this.getContentResolver(),
-//                    file.getAbsolutePath(), fileName, null);
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        }
-        // 通知图库更新
-//        sendBroadcast(new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE,
-//                Uri.parse("file://" + "/sdcard/namecard/")));
 
     }
 
