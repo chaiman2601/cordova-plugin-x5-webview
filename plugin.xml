@@ -30,6 +30,8 @@
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
             <uses-permission android:name="android.permission.INTERNET" />
             <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+			<!-- @change 新增权限-->
+			<uses-permission android:name="android.permission.CAMERA" />
         </config-file>
 
         <source-file src="platforms/android/src/org/jeremyup/cordova/x5engine/X5CookieManager.java" target-dir="src/org/jeremyup/cordova/x5engine"/>
