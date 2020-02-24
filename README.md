@@ -1,3 +1,11 @@
+
+功能修改：
+1. 修改不能选择文件的bug
+2. 增加 拍照功能
+```html
+   <inpt type="file" accept="*/*">
+```
+
 cordova-plugin-x5-webview
 ====
 
